@@ -60,9 +60,9 @@ paths:
               charset: UTF8
               content: hello
               array:
-                - receiver: 10086
+                - receiver: "10086"
                   content: hello sms
-                - receiver: 10001    
+                - receiver: "10001"   
             schema:
               required:
                 - account
@@ -180,12 +180,12 @@ paths:
                     success: 2
                     fail: 0
                     array:
-                      - msgId: 123456
-                        chatId: 123456
-                        receiver: 10086
-                      - msgId: 123457
-                        chatId: 123457
-                        receiver: 10001
+                      - msgId: 123456abcd
+                        chatId: 123456abc
+                        receiver: "10086"
+                      - msgId: 123457abcd
+                        chatId: 123457abc
+                        receiver: "10001"
           headers: {}
       security: []
 
@@ -307,12 +307,12 @@ paths:
                     success: 2
                     fail: 0
                     array:
-                      - msgId: 123456
-                        chatId: 123456
-                        receiver: 10086
-                      - msgId: 123457
-                        chatId: 123457
-                        receiver: 10001
+                      - msgId: 123456abcd
+                        chatId: 123456abc
+                        receiver: "10086"
+                      - msgId: 123457abcd
+                        chatId: 123457abc
+                        receiver: "10001"
           headers: {}
       security: []
   http://ip:20003/chat_reply:
@@ -330,7 +330,7 @@ paths:
               seq: 13
               charset: UTF8
               switch: 1
-              chatId: 125
+              chatId: "125"
               content: reply    
             schema:
               required:
@@ -387,8 +387,8 @@ paths:
                 seq: 13
                 status: 0
                 reason: success
-                msgId: 125
-                receiver: 10086
+                msgId: "125"
+                receiver: "10086"
                 switch: 0   
               schema:
                 type: object
@@ -481,8 +481,8 @@ paths:
                 seq: 13
                 status: 0
                 reason: success
-                msgId: 125
-                receiver: 10086
+                msgId: "125"
+                receiver: "10086"
                 switch: 0   
               schema:
                 type: object
@@ -588,27 +588,27 @@ paths:
                 waiting_cnt: 1
                 array:
                   - isChat: 1
-                    msgId: 123
+                    msgId: "123"
                     chatId: 1234abcd
-                    receiver: 10001
-                    submittm: timestamp
-                    sendtm: timestamp
-                    donetm: timestamp
+                    receiver: "10001"
+                    submittm: 1744696196
+                    sendtm: 1744696196
+                    donetm: 1744696196
                     status: 0
                     reason: success
                   - isChat: 1
-                    msgId: 124
+                    msgId: "124"
                     chatId: 1235abcd
-                    reciver: 10086
-                    submittm: timestamp
-                    sendtm: timestamp
-                    donetm: timestamp
+                    reciver: "10086"
+                    submittm: 1744696196
+                    sendtm: 1744696196
+                    donetm: 1744696196
                     status: 0
                     reason: success
                 notfound_array: 
-                  - msgId: 334
+                  - msgId: "334"
                 waiting_array:
-                  - msgId: 456
+                  - msgId: "456"
               schema:
                 type: object
                 required:
@@ -788,21 +788,21 @@ paths:
                     cnt: 2
                     array:
                       - isChat: 1
-                        msgId: 123
+                        msgId: "123"
                         chatId: 1234abcd
-                        receiver: 10001
-                        submittm: timestamp
-                        sendtm: timestamp
-                        donetm: timestamp
+                        receiver: "10001"
+                        submittm: 1744696196
+                        sendtm: 1744696196
+                        donetm: 1744696196
                         status: 0
                         reason: success
                       - isChat: 1
-                        msgId: 124
+                        msgId: "124"
                         chatId: 1235abcd
-                        reciver: 10086
-                        submittm: timestamp
-                        sendtm: timestamp
-                        donetm: timestamp
+                        reciver: "10086"
+                        submittm: 1744696196
+                        sendtm: 1744696196
+                        donetm: 1744696196
                         status: 0
                         reason: success
           headers: {}
@@ -873,7 +873,7 @@ paths:
                     seq: 3
                     array:
                       - chatId: 1234abcd
-                        receiver: 10001
+                        receiver: "10001"
                         recvtm: 1744696196
                         sms: nice
 
